@@ -1,0 +1,50 @@
+.jumbotron-fluid {
+    background: url("../assets/background.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+.jumbo-head {
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: 1px 1px white;
+}
+
+.jumbo-text {
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+    font-size: 1.5em;
+}
+
+.blue {
+    color: #104a62;
+} 
+
+a {
+    color: #104a62;
+}
+
+ a:hover {
+    color: #83deff;
+    text-decoration: none;
+ }
+
+ .nav-logo {
+    width: 100px;
+    height: 80px;
+ }
+
+ nav a {
+    color: #104A62;
+ }
+
+.result-container {
+    box-sizing: border-box;
+    background: rgba(16,74,98,0.2);
+    border-radius: 10px;
+    padding: 40px;
+    }
+

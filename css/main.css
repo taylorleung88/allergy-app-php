@@ -1,0 +1,25 @@
+.border {
+	border: 1px solid black;
+}
+
+.jumbotron {
+    background: url("../assets/background.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.jumbotron-fluid {
+    background: url("../assets/background.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+.blue {
+	background-color: blue;
+	color: blue;
+}
