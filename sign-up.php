@@ -13,13 +13,14 @@
     <script src="queryFunctions.js" type="text/javascript"></script>
 </head>
 <nav class="navbar navbar-expand-lg navbar-light Blue-background">
-    <a class="navbar-brand" href="#"> LOGO GOES HERE </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="login.php"><img class="nav-logo" src="./assets/chefhat.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"> </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#"> My Recipes </a>
+            <a href="nav-item nav-link" href="search.php">Search for Rrecipes</a>
+            <a class="nav-item nav-link" href="myrecipes"> My Recipes </a>
             <a class="nav-item nav-link" href="settings.php"> Settings </a>
             <a class="nav-item nav-link" href="login.php"> Login </a>
         </div>
@@ -29,7 +30,7 @@
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <h1 class="text-center">Sign Up</h1>
-            <form action="" method="POST">
+            <form action="sign-up-check.php" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" name="firstName" id="firstName" />
@@ -48,21 +49,21 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Re-Enter Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Re-Enter Password" />
+                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Re-Enter Password" />
                 </div>
                 <div class="form-group">
                     <label for="allergies">I'm allergic to...</label><br />
                     <div class="checkbox">
-                        <label><input type="checkbox" name="allergies" value="nuts" /> Nuts</label>
+                        <label><input type="checkbox" name="nuts" value="1" /> Nuts</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="allergies" value="seafood" /> Seafood</label>
+                        <label><input type="checkbox" name="seafood" value="1" /> Seafood</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="allergies" value="soy" /> Soy</label>
+                        <label><input type="checkbox" name="soy" value="1" /> Soy</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="allergies" value="gluten" /> Gluten</label>
+                        <label><input type="checkbox" name="gluten" value="1" /> Gluten</label>
                     </div>
                 </div>
                 <div class="text-center">
@@ -74,38 +75,6 @@
     </div>
 </div>
 
-<?php  
-	require_once('config.php');
-	if(isset($_POST["submit"])){  
-		if(!empty($_POST['email']) && !empty($_POST['password'])) {  
-	    $email=$_POST['email'];  
-	    $pass=$_POST['password'];  
-	    $conn = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
-			$db_table = "users";
-	    //$con=mysql_connect('localhost','root','wit123', 'users') or die(mysql_error());  
-	    //mysql_select_db('users') or die("cannot select DB");  
-	  
-	    $query=mysqli_query($conn, "SELECT * FROM users WHERE userEmail='".$email."'");  
-	    $numrows=mysqli_num_rows($query);  
-	    if($numrows==0)  
-	    {  
-	    $sql="INSERT INTO users(userEmail,userPass) VALUES('$email','$pass')";  
-	  
-	    $result=mysqli_query($conn, $sql);  
-	        if($result){  
-	    echo "Account Successfully Created";  
-	    } else {  
-	    echo "Failure!";  
-	    }  
-	  
-	    } else {  
-	    echo "That username already exists! Please try again with another.";  
-	    }  
-	  
-		} else {  
-	    echo "All fields are required!";  
-		}  
-	}  
-?>  
+
 
 </html>
